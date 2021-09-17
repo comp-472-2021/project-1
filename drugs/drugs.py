@@ -3,6 +3,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
 from constants import DRUGS_FEATURES
+from test import print_prediction
 
 
 def fetch_drugs_features_data(drugs_csv_model):
@@ -11,10 +12,6 @@ def fetch_drugs_features_data(drugs_csv_model):
 
 def fetch_drugs_target_data(drugs_csv_model):
     return drugs_csv_model[DRUGS_FEATURES["DRUG"]].head()
-
-
-def fetch_drugs_test_data(drugs_csv_model):
-    return drugs_csv_model.drop(DRUGS_FEATURES["DRUG"], axis=1).tail()
 
 
 def get_naive_bayes_classifier():
@@ -32,5 +29,5 @@ features_vectors = vectorizer.fit_transform(drugs_features)
 
 naive_bayes_classifier = get_naive_bayes_classifier()
 
-# drugs_test_data = fetch_drugs_test_data(drugs_csv_model)
-# vectors_test = vectorizer.transform(drugs_test_data)
+# testing
+print_prediction(naive_bayes_classifier, vectorizer)
