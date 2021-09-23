@@ -63,7 +63,7 @@ def get_naive_bayes_classifier(features_vectors):
     return initial_naive_bayes_classifier
 
 
-def question4():
+def question4_5():
     vectorizer = TfidfVectorizer()
 
     features_train_set, features_test_set, target_train_set, target_test_set = fetch_drugs_data()
