@@ -1,5 +1,6 @@
 import pandas as panda
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
 
 from drugs.constants import DRUGS_FEATURES
@@ -44,32 +45,31 @@ def select_formatted_drugs_features(drugs_csv_model):
 
 def fetch_drugs_features_data():
     formatted_drugs_csv_model = select_formatted_drugs_features(panda.read_csv('../drug200.csv'))
-    formatted_drugs_csv_model = formatted_drugs_csv_model.drop(DRUGS_FEATURES["DRUG"], axis=1)
-    return formatted_drugs_csv_model.head()
+    return formatted_drugs_csv_model.drop(DRUGS_FEATURES["DRUG"], axis=1)
 
 
-def fetch_drugs_target_data(drugs_csv_model):
-    return drugs_csv_model[DRUGS_FEATURES["DRUG"]].head()
+def fetch_drugs_target_data():
+    return panda.read_csv('../drug200.csv')[DRUGS_FEATURES["DRUG"]]
 
 
-def get_naive_bayes_classifier(drugs_csv_model, features_vectors):
+def fetch_drugs_data():
+    return train_test_split(fetch_drugs_target_data(), fetch_drugs_features_data())
+
+
+def get_naive_bayes_classifier(features_vectors):
     initial_naive_bayes_classifier = MultinomialNB(alpha=.01)
-    drugs_target_data = fetch_drugs_target_data(drugs_csv_model)
+    drugs_target_data = fetch_drugs_target_data()
     initial_naive_bayes_classifier.fit(features_vectors, drugs_target_data)
     return initial_naive_bayes_classifier
 
 
 def question4():
-    drugs_csv_model = panda.read_csv('../drug200.csv')
     vectorizer = TfidfVectorizer()
 
-    drugs_features = fetch_drugs_features_data()
-    features_vectors = vectorizer.fit_transform(drugs_features)
+    features_train_set, features_test_set, target_train_set, target_test_set = fetch_drugs_data()
+    features_vectors = vectorizer.fit_transform(features_train_set)
 
-    naive_bayes_classifier = get_naive_bayes_classifier(drugs_csv_model, features_vectors)
+    naive_bayes_classifier = get_naive_bayes_classifier(features_vectors)
 
     # testing
     print_prediction(naive_bayes_classifier, vectorizer)
-
-
-fetch_drugs_features_data()
