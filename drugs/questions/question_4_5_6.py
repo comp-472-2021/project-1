@@ -1,10 +1,9 @@
 import pandas as panda
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import MultinomialNB
 
 from drugs.constants import DRUGS_FEATURES
-from drugs.test import print_prediction
+from drugs.questions.question_6 import NB_classifier
 
 
 def select_numerical_sex_values_from_sex(sex):
@@ -32,6 +31,15 @@ def select_numerical_cholesterol_values_from_cholesterol(cholesterol):
         return 2
 
 
+def select_numerical_drug_values_from_drugs_category(drug_category):
+    if drug_category == "drugY":
+        return 0
+    if drug_category == "drugC":
+        return 1
+    else:
+        return 2
+
+
 def select_formatted_drugs_features(drugs_csv_model):
     drugs_csv_model[DRUGS_FEATURES["SEX"]] = drugs_csv_model[DRUGS_FEATURES["SEX"]].map(
         select_numerical_sex_values_from_sex)
@@ -49,27 +57,34 @@ def fetch_drugs_features_data():
 
 
 def fetch_drugs_target_data():
-    return panda.read_csv('../drug200.csv')[DRUGS_FEATURES["DRUG"]]
+    drug_targets = panda.read_csv('../drug200.csv')[DRUGS_FEATURES["DRUG"]]
+    return drug_targets.map(select_numerical_drug_values_from_drugs_category)
 
 
 def fetch_drugs_data():
     return train_test_split(fetch_drugs_target_data(), fetch_drugs_features_data())
 
 
-def get_naive_bayes_classifier(features_vectors):
-    initial_naive_bayes_classifier = MultinomialNB(alpha=.01)
-    drugs_target_data = fetch_drugs_target_data()
-    initial_naive_bayes_classifier.fit(features_vectors, drugs_target_data)
-    return initial_naive_bayes_classifier
-
-
-def question4_5():
+def question4_5_6():
     vectorizer = TfidfVectorizer()
 
     features_train_set, features_test_set, target_train_set, target_test_set = fetch_drugs_data()
-    features_vectors = vectorizer.fit_transform(features_train_set)
+    # features_vectors = vectorizer.fit_transform(features_train_set)
 
-    naive_bayes_classifier = get_naive_bayes_classifier(features_vectors)
+    # 6 a)
+    NB_classifier(features_train_set, target_train_set, vectorizer, features_test_set)
 
-    # testing
-    print_prediction(naive_bayes_classifier, vectorizer)
+    # 6 b)
+    # decision_tree(features_vectors, target_train_set, vectorizer, features_test_set)
+    #
+    # # 6 c)
+    # perceptron(features_vectors, target_train_set, vectorizer, features_test_set)
+    #
+    # # 6 d)
+    # multi_layered_perceptron(features_vectors, target_train_set, vectorizer, features_test_set)
+    #
+    # # 6 e)
+    # grid_search_perceptron(features_vectors, target_train_set, vectorizer, features_test_set)
+
+
+question4_5_6()
