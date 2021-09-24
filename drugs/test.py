@@ -1,6 +1,6 @@
 import pandas as panda
 
-from constants import DRUGS_FEATURES
+from drugs.constants import DRUGS_FEATURES
 
 
 def fetch_drugs_test_data(drugs_csv_model):
