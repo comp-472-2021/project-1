@@ -30,16 +30,6 @@ def select_numerical_cholesterol_values_from_cholesterol(cholesterol):
     else:
         return 2
 
-
-def select_numerical_drug_values_from_drugs_category(drug_category):
-    if drug_category == "drugY":
-        return 0
-    if drug_category == "drugC":
-        return 1
-    else:
-        return 2
-
-
 def select_formatted_drugs_features(drugs_csv_model):
     drugs_csv_model[DRUGS_FEATURES["SEX"]] = drugs_csv_model[DRUGS_FEATURES["SEX"]].map(
         select_numerical_sex_values_from_sex)
@@ -58,7 +48,7 @@ def fetch_drugs_features_data():
 
 def fetch_drugs_target_data():
     drug_targets = panda.read_csv('../drug200.csv')[DRUGS_FEATURES["DRUG"]]
-    return drug_targets.map(select_numerical_drug_values_from_drugs_category)
+    return panda.Categorical(drug_targets).codes
 
 
 def fetch_drugs_data():
