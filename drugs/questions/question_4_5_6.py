@@ -1,8 +1,9 @@
 import pandas as panda
 from sklearn.model_selection import train_test_split
 
+from common import clear_prediction_results
 from drugs.constants import DRUGS_FEATURES
-from drugs.questions.question_6 import NB_classifier
+from drugs.questions.question_6 import NB_classifier, decision_tree, grid_search_tree
 
 
 def select_numerical_sex_values_from_sex(sex):
@@ -56,16 +57,18 @@ def fetch_drugs_data():
 
 
 def question4_5_6():
+    clear_prediction_results()
+
     features_train_set, features_test_set, target_train_set, target_test_set = fetch_drugs_data()
 
     # 6 a)
     NB_classifier(features_train_set, target_train_set, features_test_set, target_test_set)
 
     # 6 b)
-    # decision_tree(features_train_set, target_train_set, features_test_set, target_test_set)
-    #
-    # # 6 c)
-    # grid_search_tree(features_train_set, target_train_set, features_test_set, target_test_set)
+    decision_tree(features_train_set, target_train_set, features_test_set, target_test_set)
+
+    # 6 c)
+    grid_search_tree(features_train_set, target_train_set, features_test_set, target_test_set)
     #
     # # 6 d)
     # perceptron(features_train_set, target_train_set, features_test_set, target_test_set)

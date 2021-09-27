@@ -23,7 +23,7 @@ def decision_tree(features_train_set, target_train_set, features_test_set, targe
 
     # testing
     prediction_results = decision_tree_classifier.predict(features_test_set)
-    print(metrics.accuracy_score(target_test_set, prediction_results))
+    output_prediction_results(target_test_set, prediction_results, "B) Decision Tree")
 
 
 def grid_search_tree(features_train_set, target_train_set, features_test_set, target_test_set):
