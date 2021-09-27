@@ -1,6 +1,6 @@
 import pandas as panda
 
-from functions import plot_instances
+from common import plot_instances
 
 
 def question3():
