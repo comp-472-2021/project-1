@@ -2,8 +2,7 @@ import pandas as panda
 from sklearn.model_selection import train_test_split
 
 from drugs.constants import DRUGS_FEATURES
-from drugs.questions.question_6 import NB_classifier, decision_tree, grid_search_tree, perceptron, \
-    multi_layered_perceptron, grid_search_perceptron
+from drugs.questions.question_6 import NB_classifier
 
 
 def select_numerical_sex_values_from_sex(sex):
@@ -29,6 +28,7 @@ def select_numerical_cholesterol_values_from_cholesterol(cholesterol):
         return 1
     else:
         return 2
+
 
 def select_formatted_drugs_features(drugs_csv_model):
     drugs_csv_model[DRUGS_FEATURES["SEX"]] = drugs_csv_model[DRUGS_FEATURES["SEX"]].map(
@@ -62,20 +62,20 @@ def question4_5_6():
     NB_classifier(features_train_set, target_train_set, features_test_set, target_test_set)
 
     # 6 b)
-    decision_tree(features_train_set, target_train_set, features_test_set, target_test_set)
-
-    # 6 c)
-    grid_search_tree(features_train_set, target_train_set, features_test_set, target_test_set)
-
-    # 6 d)
-    perceptron(features_train_set, target_train_set, features_test_set, target_test_set)
-
-    # 6 e)
-    multi_layered_perceptron(features_train_set, target_train_set, features_test_set,
-                             target_test_set)
-
-    # 6 f)
-    grid_search_perceptron(features_train_set, target_train_set, features_test_set, target_test_set)
+    # decision_tree(features_train_set, target_train_set, features_test_set, target_test_set)
+    #
+    # # 6 c)
+    # grid_search_tree(features_train_set, target_train_set, features_test_set, target_test_set)
+    #
+    # # 6 d)
+    # perceptron(features_train_set, target_train_set, features_test_set, target_test_set)
+    #
+    # # 6 e)
+    # multi_layered_perceptron(features_train_set, target_train_set, features_test_set,
+    #                          target_test_set)
+    #
+    # # 6 f)
+    # grid_search_perceptron(features_train_set, target_train_set, features_test_set, target_test_set)
 
 
 question4_5_6()

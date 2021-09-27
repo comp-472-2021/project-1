@@ -5,6 +5,8 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.neural_network import MLPClassifier
 from sklearn.tree import DecisionTreeClassifier
 
+from common import output_prediction_results
+
 
 def NB_classifier(features_train_set, target_train_set, features_test_set, target_test_set):
     nb_classifier = GaussianNB()
@@ -12,7 +14,7 @@ def NB_classifier(features_train_set, target_train_set, features_test_set, targe
 
     # testing
     prediction_results = nb_classifier.predict(features_test_set)
-    print(metrics.accuracy_score(target_test_set, prediction_results))
+    output_prediction_results(target_test_set, prediction_results, "A) NB Classifier")
 
 
 def decision_tree(features_train_set, target_train_set, features_test_set, target_test_set):
@@ -25,7 +27,7 @@ def decision_tree(features_train_set, target_train_set, features_test_set, targe
 
 
 def grid_search_tree(features_train_set, target_train_set, features_test_set, target_test_set):
-    param_grid = {"criterion": ["gini"],
+    param_grid = {"criterion": ["gini", "entropy"],
                   'max_depth': list(range(1, 15)),
                   'min_samples_split': list(range(5, 15))
                   }
@@ -59,7 +61,11 @@ def multi_layered_perceptron(features_train_set, target_train_set, features_test
 
 def grid_search_perceptron(features_train_set, target_train_set, features_test_set,
                            target_test_set):
-    param_grid = {}
+    param_grid = {
+        "activation": ["tanh", "relu", "and", "identity"],
+        "hidden_layer_sizes": [(100,), (10, 10, 10), (30, 50)],
+        "solver": ["lbfgs", "sgd", "adam"]
+    }
     grid_mlp_classifier = GridSearchCV(MLPClassifier(hidden_layer_sizes=(100,),
                                                      activation="logistic",
                                                      solver="sgd"), param_grid)
