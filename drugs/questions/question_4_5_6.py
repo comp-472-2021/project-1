@@ -1,9 +1,10 @@
 import pandas as panda
 from sklearn.model_selection import train_test_split
 
+from common import clear_prediction_results, set_cwd
 from drugs.constants import DRUGS_FEATURES
-from drugs.questions.question_6 import NB_classifier, decision_tree, grid_search_tree, perceptron, \
-    multi_layered_perceptron, grid_search_perceptron
+from drugs.questions.question_6 import NB_classifier, decision_tree, grid_search_tree, \
+    grid_search_perceptron, multi_layered_perceptron, perceptron
 
 
 def select_numerical_sex_values_from_sex(sex):
@@ -30,6 +31,7 @@ def select_numerical_cholesterol_values_from_cholesterol(cholesterol):
     else:
         return 2
 
+
 def select_formatted_drugs_features(drugs_csv_model):
     drugs_csv_model[DRUGS_FEATURES["SEX"]] = drugs_csv_model[DRUGS_FEATURES["SEX"]].map(
         select_numerical_sex_values_from_sex)
@@ -42,12 +44,14 @@ def select_formatted_drugs_features(drugs_csv_model):
 
 
 def fetch_drugs_features_data():
-    formatted_drugs_csv_model = select_formatted_drugs_features(panda.read_csv('../drug200.csv'))
+    set_cwd()
+    formatted_drugs_csv_model = select_formatted_drugs_features(panda.read_csv('drugs/drug200.csv'))
     return formatted_drugs_csv_model.drop(DRUGS_FEATURES["DRUG"], axis=1)
 
 
 def fetch_drugs_target_data():
-    drug_targets = panda.read_csv('../drug200.csv')[DRUGS_FEATURES["DRUG"]]
+    set_cwd()
+    drug_targets = panda.read_csv('drugs/drug200.csv')[DRUGS_FEATURES["DRUG"]]
     return panda.Categorical(drug_targets).codes
 
 
@@ -56,6 +60,8 @@ def fetch_drugs_data():
 
 
 def question4_5_6():
+    clear_prediction_results()
+
     features_train_set, features_test_set, target_train_set, target_test_set = fetch_drugs_data()
 
     # 6 a)

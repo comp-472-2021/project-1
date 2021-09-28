@@ -15,5 +15,4 @@ def question3():
 
     drug_names = sorted(drugs_csv_model['Drug'].unique())
     drug_values = [drugA_count, drugB_count, drugC_count, drugX_count, drugY_count]
-    drug_pdf = 'drug-distribution.pdf'
-    plot_instances(drug_pdf, drug_names, drug_values)
+    plot_instances('drug-distribution.pdf', drug_names, drug_values)

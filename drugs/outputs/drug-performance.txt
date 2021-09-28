@@ -1,0 +1,31 @@
+
+ 
+***** A) NB Classifier *****
+Parameters: default
+Precision: 0.9225
+Recall: 0.88
+F1 score: 0.8840893300248139
+ 
+***** B) Decision Tree *****
+Parameters: default
+Precision: 0.9828571428571428
+Recall: 0.98
+F1 score: 0.98
+ 
+***** C) *****
+Search tree Hyper Parameters: {'criterion': 'gini', 'max_depth': 4, 'min_samples_split': 5}
+ 
+***** D) Perceptron *****
+Parameters: default
+Precision: 0.4122448979591837
+Recall: 0.38
+F1 score: 0.23076616915422885
+ 
+***** E) Multi-level perceptron *****
+Parameters: hidden_layer_sizes=(100,),activation = logistic,solver = sgd
+Precision: 0.27422750424448217
+Recall: 0.44
+F1 score: 0.3369202226345083
+ 
+***** F) *****
+Perceptron Hyper Parameters: {'activation': 'identity', 'hidden_layer_sizes': (30, 50), 'solver': 'lbfgs'}

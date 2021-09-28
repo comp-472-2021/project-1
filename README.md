@@ -1,5 +1,9 @@
 # Project 1
 
+## Run Drugs Classification
+
+    run -> main.py
+
 ### Drugs numerical mapping
 
 #### Age -> age
