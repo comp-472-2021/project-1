@@ -3,6 +3,14 @@ import os
 import matplotlib.pyplot as plt
 from sklearn import metrics
 
+path_to_drug_performance = "drugs/outputs/drug-performance.txt"
+
+
+def set_cwd():
+    abspath = os.path.abspath(__file__)
+    dname = os.path.dirname(abspath)
+    os.chdir(dname)
+
 
 def plot_instances(pdf_name, names, values):
     fig = plt.figure(figsize=(7, 7))
@@ -14,11 +22,14 @@ def plot_instances(pdf_name, names, values):
 
 
 def clear_prediction_results():
-    os.remove("../outputs/drug-performance.txt")
+    set_cwd()
+    if os.path.exists(path_to_drug_performance):
+        os.remove(path_to_drug_performance)
 
 
 def output_prediction_results(target_test_set, prediction_results, header, parameters="default"):
-    file = open("../outputs/drug-performance.txt", 'a+')
+    set_cwd()
+    file = open("drugs/outputs/drug-performance.txt", 'a+')
     performance_content = "\n \n***** " + header + " *****"
     performance_content += "\nParameters: " + parameters
     performance_content += "\nPrecision: " + str(
@@ -29,3 +40,12 @@ def output_prediction_results(target_test_set, prediction_results, header, param
         metrics.f1_score(target_test_set, prediction_results, average="weighted"))
     print(performance_content)
     file.write(performance_content)
+
+
+def output_hyper_parameters(hyper_parameters, model_name, header):
+    set_cwd()
+    file = open(path_to_drug_performance, 'a+')
+    content = "\n \n***** " + header + " *****"
+    content += "\n" + model_name + " Hyper Parameters: " + hyper_parameters
+    print(content)
+    file.write(content)
