@@ -12,7 +12,7 @@ def main():
     question_3_4_5_6()
 
 
-def train_classifier(X_train, y_train, X_test, y_test, output,target_name, description, smoothing_value):
+def train_classifier(X_train, y_train, X_test, y_test, output, target_name, description, smoothing_value):
     # Question 6 will be put in an function with Q7 later for reuse purpose
     multinomialNB = MultinomialNB(alpha=smoothing_value)
     classifier = multinomialNB.fit(X_train, y_train)
@@ -23,6 +23,7 @@ def train_classifier(X_train, y_train, X_test, y_test, output,target_name, descr
 
     y_predict = classifier.predict(X_test)
     confusion_matrix = cm(y_test, y_predict)
+
     output.write("(b) confusion_matrix:\n")
     for column in confusion_matrix:
         for value in column:
@@ -31,6 +32,7 @@ def train_classifier(X_train, y_train, X_test, y_test, output,target_name, descr
 
     output.write("(c) classification report:\n")
     output.write(classification_report(y_test, y_predict, target_names=target_name))
+
     output.write("(d) More detailed accuracy: " + str(accuracy_score(y_test, y_predict)) + "\n")
     output.write(
         "More detailed macro-average F1: " + str(
@@ -38,9 +40,21 @@ def train_classifier(X_train, y_train, X_test, y_test, output,target_name, descr
     output.write("More detailed weighted-average F1: " + str(
         f1_score(y_test, y_predict, average="weighted")) + "\n")
 
+    output.write("(e) prior probability of each class:\n")
+    y_list = y_train.tolist()
+    for x in range(0, 5):
+        y_list_class = y_list.count(x)
+        prior_y_list = y_list_class / len(y_list)
+        output.write(f"Class: {target_name[x]} {prior_y_list}\n")
+
+    output.write("\n(f) size of the vocabulary:\n")
+    number_of_different_words = X_train.shape[1]
+    output.write(f"There are {number_of_different_words} different words\n")
+
+    output.write("\n(g) number of word-tokens by class:\n")
 
     output.write("\n")
-    print(numpy.mean(y_predict == y_test))
+    # print(numpy.mean(y_predict == y_test))
 
 
 def question_3_4_5_6():
