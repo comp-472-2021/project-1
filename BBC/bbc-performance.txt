@@ -1,22 +1,92 @@
 (a) ***************  MultinomialNB default values, try 1  ***************
 (b) confusion_matrix:
-107       0         3         0         1         
-0         76        1         0         2         
-1         0         89        0         0         
-0         1         0         80        0         
-0         0         0         0         84        
+88        0         6         0         3         
+1         67        0         0         2         
+1         1         92        0         0         
+0         0         0         104       0         
+0         0         2         0         78        
 (c) classification report:
                precision    recall  f1-score   support
 
-     business       0.99      0.96      0.98       111
-entertainment       0.99      0.96      0.97        79
-     politics       0.96      0.99      0.97        90
-        sport       1.00      0.99      0.99        81
-         tech       0.97      1.00      0.98        84
+     business       0.98      0.91      0.94        97
+entertainment       0.99      0.96      0.97        70
+     politics       0.92      0.98      0.95        94
+        sport       1.00      1.00      1.00       104
+         tech       0.94      0.97      0.96        80
 
-     accuracy                           0.98       445
-    macro avg       0.98      0.98      0.98       445
- weighted avg       0.98      0.98      0.98       445
-(d) More detailed accuracy: 0.9797752808988764
-More detailed macro-average F1: 0.9797752808988764
-More detailed weighted-average F1: 0.9797849577640122
+     accuracy                           0.96       445
+    macro avg       0.96      0.96      0.96       445
+ weighted avg       0.97      0.96      0.96       445
+(d) More detailed accuracy: 0.9640449438202248
+More detailed macro-average F1: 0.9640449438202248
+More detailed weighted-average F1: 0.9640094123437849
+
+(a) ***************  MultinomialNB default values, try 2  ***************
+(b) confusion_matrix:
+88        0         6         0         3         
+1         67        0         0         2         
+1         1         92        0         0         
+0         0         0         104       0         
+0         0         2         0         78        
+(c) classification report:
+               precision    recall  f1-score   support
+
+     business       0.98      0.91      0.94        97
+entertainment       0.99      0.96      0.97        70
+     politics       0.92      0.98      0.95        94
+        sport       1.00      1.00      1.00       104
+         tech       0.94      0.97      0.96        80
+
+     accuracy                           0.96       445
+    macro avg       0.96      0.96      0.96       445
+ weighted avg       0.97      0.96      0.96       445
+(d) More detailed accuracy: 0.9640449438202248
+More detailed macro-average F1: 0.9640449438202248
+More detailed weighted-average F1: 0.9640094123437849
+
+(a) ***************  MultinomialNB smoothing value 0.0001, try 1  ***************
+(b) confusion_matrix:
+91        0         4         0         2         
+1         67        1         0         1         
+1         0         93        0         0         
+0         0         0         104       0         
+1         0         1         0         78        
+(c) classification report:
+               precision    recall  f1-score   support
+
+     business       0.97      0.94      0.95        97
+entertainment       1.00      0.96      0.98        70
+     politics       0.94      0.99      0.96        94
+        sport       1.00      1.00      1.00       104
+         tech       0.96      0.97      0.97        80
+
+     accuracy                           0.97       445
+    macro avg       0.97      0.97      0.97       445
+ weighted avg       0.97      0.97      0.97       445
+(d) More detailed accuracy: 0.9730337078651685
+More detailed macro-average F1: 0.9730337078651685
+More detailed weighted-average F1: 0.9730397172625604
+
+(a) ***************  MultinomialNB smoothing value 0.9, try 1  ***************
+(b) confusion_matrix:
+88        0         6         0         3         
+1         67        1         0         1         
+1         1         92        0         0         
+0         0         0         104       0         
+0         0         2         0         78        
+(c) classification report:
+               precision    recall  f1-score   support
+
+     business       0.98      0.91      0.94        97
+entertainment       0.99      0.96      0.97        70
+     politics       0.91      0.98      0.94        94
+        sport       1.00      1.00      1.00       104
+         tech       0.95      0.97      0.96        80
+
+     accuracy                           0.96       445
+    macro avg       0.97      0.96      0.96       445
+ weighted avg       0.97      0.96      0.96       445
+(d) More detailed accuracy: 0.9640449438202248
+More detailed macro-average F1: 0.9640449438202248
+More detailed weighted-average F1: 0.9640440563467089
+

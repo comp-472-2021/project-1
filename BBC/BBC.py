@@ -12,29 +12,13 @@ def main():
     question_3_4_5_6()
 
 
-def question_3_4_5_6():
-    set_cwd()
-    # Question 3
-    BBC_data = load_files('BBC/BBC', encoding='latin1')
-    X = BBC_data.data
-    y = BBC_data.target
-    target_name = BBC_data.target_names
-
-    # Question 4
-    X_train_counts = CountVectorizer().fit_transform(X)
-
-    # Question 5
-    X_train, X_test, y_train, y_test = train_test_split(X_train_counts, y, test_size=0.2,
-                                                        random_state=None)
-
-    output = open("BBC/bbc-performance.txt", "w")
-
+def train_classifier(X_train, y_train, X_test, y_test, output,target_name, description, smoothing_value):
     # Question 6 will be put in an function with Q7 later for reuse purpose
-    multinomialNB = MultinomialNB()
+    multinomialNB = MultinomialNB(alpha=smoothing_value)
     classifier = multinomialNB.fit(X_train, y_train)
 
     # Question 7
-    description = "MultinomialNB default values, try 1"
+
     output.write("(a) ***************  " + description + "  ***************\n")
 
     y_predict = classifier.predict(X_test)
@@ -54,5 +38,33 @@ def question_3_4_5_6():
     output.write("More detailed weighted-average F1: " + str(
         f1_score(y_test, y_predict, average="weighted")) + "\n")
 
-    # some basic test
+
+    output.write("\n")
     print(numpy.mean(y_predict == y_test))
+
+
+def question_3_4_5_6():
+    set_cwd()
+    # Question 3
+    BBC_data = load_files('BBC/BBC', encoding='latin1')
+    X = BBC_data.data
+    y = BBC_data.target
+    target_name = BBC_data.target_names
+
+    # Question 4
+    X_train_counts = CountVectorizer().fit_transform(X)
+
+    # Question 5
+    X_train, X_test, y_train, y_test = train_test_split(X_train_counts, y, test_size=0.2,
+                                                        random_state=None)
+
+    output = open("BBC/bbc-performance.txt", "w")
+
+    train_classifier(X_train, y_train, X_test, y_test, output, target_name, "MultinomialNB default values, try 1", 1)
+    train_classifier(X_train, y_train, X_test, y_test, output, target_name, "MultinomialNB default values, try 2", 1)
+    train_classifier(X_train, y_train, X_test, y_test, output, target_name, "MultinomialNB smoothing value 0.0001, "
+                                                                            "try 1", 0.0001)
+    train_classifier(X_train, y_train, X_test, y_test, output, target_name, "MultinomialNB smoothing value 0.9, "
+                                                                            "try 1", 0.9)
+
+    # some basic test
