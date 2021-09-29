@@ -13,12 +13,13 @@ def set_cwd():
 
 
 def plot_instances(pdf_name, names, values):
+    set_cwd()
     fig = plt.figure(figsize=(7, 7))
     x_location = [i + 1 for i in range(0, 5)]
     for i, v in enumerate(values):
         plt.text(x_location[i] - 1, v + 2, str(v))
     plt.bar(names, values)
-    fig.savefig("outputs/" + pdf_name, dpi=fig.dpi)
+    fig.savefig("drugs/outputs/" + pdf_name, dpi=fig.dpi)
 
 
 def clear_prediction_results():
@@ -30,15 +31,33 @@ def clear_prediction_results():
 def output_prediction_results(target_test_set, prediction_results, header, parameters="default"):
     set_cwd()
     file = open("drugs/outputs/drug-performance.txt", 'a+')
+
     performance_content = "\n \n***** " + header + " *****"
+
     performance_content += "\nParameters: " + parameters
+
+    performance_content += "\nConfusion matrix: " + str(metrics.confusion_matrix(target_test_set,
+                                                                                 prediction_results))
     performance_content += "\nPrecision: " + str(
         metrics.precision_score(target_test_set, prediction_results, average="weighted"))
+
     performance_content += "\nRecall: " + str(
         metrics.accuracy_score(target_test_set, prediction_results))
+
     performance_content += "\nF1 score: " + str(
+        metrics.f1_score(target_test_set, prediction_results, average=None))
+
+    performance_content += "\nAccuracy: " + str(
+        metrics.accuracy_score(target_test_set, prediction_results))
+
+    performance_content += "\nMacro-average F1 score: " + str(
+        metrics.f1_score(target_test_set, prediction_results, average="macro"))
+
+    performance_content += "\nWeighted-average F1 score: " + str(
         metrics.f1_score(target_test_set, prediction_results, average="weighted"))
+
     print(performance_content)
+
     file.write(performance_content)
 
 

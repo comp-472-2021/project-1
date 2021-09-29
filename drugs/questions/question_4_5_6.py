@@ -82,6 +82,3 @@ def question4_5_6():
 
     # 6 f)
     grid_search_perceptron(features_train_set, target_train_set, features_test_set, target_test_set)
-
-
-question4_5_6()

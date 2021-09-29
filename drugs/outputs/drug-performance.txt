@@ -2,30 +2,62 @@
  
 ***** A) NB Classifier *****
 Parameters: default
-Precision: 0.9225
-Recall: 0.88
-F1 score: 0.8840893300248139
+Confusion matrix: [[ 7  0  0  0  0]
+ [ 0  4  0  0  0]
+ [ 0  0  2  0  0]
+ [ 0  0  0 13  0]
+ [ 1  2  2  0 19]]
+Precision: 0.9358333333333333
+Recall: 0.9
+F1 score: [0.93333333 0.8        0.66666667 1.         0.88372093]
+Accuracy: 0.9
+Macro-average F1 score: 0.8567441860465117
+Weighted-average F1 score: 0.9055193798449613
  
 ***** B) Decision Tree *****
 Parameters: default
-Precision: 0.9828571428571428
-Recall: 0.98
-F1 score: 0.98
+Confusion matrix: [[ 7  0  0  0  0]
+ [ 0  4  0  0  0]
+ [ 0  0  2  0  0]
+ [ 0  0  0 13  0]
+ [ 0  0  0  0 24]]
+Precision: 1.0
+Recall: 1.0
+F1 score: [1. 1. 1. 1. 1.]
+Accuracy: 1.0
+Macro-average F1 score: 1.0
+Weighted-average F1 score: 1.0
  
-***** C) *****
+***** C) Search tree GridSearch *****
 Search tree Hyper Parameters: {'criterion': 'gini', 'max_depth': 4, 'min_samples_split': 5}
  
 ***** D) Perceptron *****
 Parameters: default
-Precision: 0.4122448979591837
-Recall: 0.38
-F1 score: 0.23076616915422885
+Confusion matrix: [[ 1  0  0  0  6]
+ [ 0  3  0  0  1]
+ [ 0  0  0  0  2]
+ [ 0  4  0  0  9]
+ [ 0  0  0  0 24]]
+Precision: 0.44857142857142857
+Recall: 0.56
+F1 score: [0.25       0.54545455 0.         0.         0.72727273]
+Accuracy: 0.56
+Macro-average F1 score: 0.30454545454545456
+Weighted-average F1 score: 0.4277272727272727
  
 ***** E) Multi-level perceptron *****
 Parameters: hidden_layer_sizes=(100,),activation = logistic,solver = sgd
-Precision: 0.27422750424448217
-Recall: 0.44
-F1 score: 0.3369202226345083
+Confusion matrix: [[ 0  0  0  1  6]
+ [ 0  0  0  4  0]
+ [ 0  0  0  0  2]
+ [ 0  0  0  4  9]
+ [ 0  0  0  1 23]]
+Precision: 0.38
+Recall: 0.54
+F1 score: [0.         0.         0.         0.34782609 0.71875   ]
+Accuracy: 0.54
+Macro-average F1 score: 0.21331521739130435
+Weighted-average F1 score: 0.4354347826086956
  
-***** F) *****
-Perceptron Hyper Parameters: {'activation': 'identity', 'hidden_layer_sizes': (30, 50), 'solver': 'lbfgs'}
+***** F) Perceptron GridSearch *****
+Perceptron Hyper Parameters: {'activation': 'identity', 'hidden_layer_sizes': (100,), 'solver': 'lbfgs'}
