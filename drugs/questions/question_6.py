@@ -31,7 +31,8 @@ def grid_search_tree(features_train_set, target_train_set, features_test_set, ta
     grid_search_tree_classifier = GridSearchCV(DecisionTreeClassifier(), param_grid)
     grid_search_tree_classifier.fit(features_train_set, target_train_set)
 
-    output_hyper_parameters(str(grid_search_tree_classifier.best_params_), "Search tree", "C)")
+    output_hyper_parameters(str(grid_search_tree_classifier.best_params_), "Search tree",
+                            "C) Search tree GridSearch")
 
 
 def perceptron(features_train_set, target_train_set, features_test_set, target_test_set):
@@ -66,4 +67,5 @@ def grid_search_perceptron(features_train_set, target_train_set, features_test_s
                                                      solver="sgd"), param_grid)
     grid_mlp_classifier.fit(features_train_set, target_train_set)
 
-    output_hyper_parameters(str(grid_mlp_classifier.best_params_), "Perceptron", "F)")
+    output_hyper_parameters(str(grid_mlp_classifier.best_params_), "Perceptron",
+                            "F) Perceptron GridSearch")

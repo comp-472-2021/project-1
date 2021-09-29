@@ -1,10 +1,11 @@
 import pandas as panda
 
-from common import plot_instances
+from common import plot_instances, set_cwd
 
 
 def question3():
-    drugs_csv_model = panda.read_csv('drug200.csv')
+    set_cwd()
+    drugs_csv_model = panda.read_csv('drugs/drug200.csv')
     drug_column_counts = drugs_csv_model.Drug.value_counts()
 
     drugA_count = drug_column_counts.drugA
