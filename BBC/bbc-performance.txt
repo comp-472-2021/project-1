@@ -1,136 +1,284 @@
 (a) ***************  MultinomialNB default values, try 1  ***************
-(b) confusion_matrix:
-102       0         2         0         1         
-0         71        0         0         1         
-1         1         90        0         0         
-0         0         1         103       0         
-0         2         2         0         68        
-(c) classification report:
+
+(b) Confusion_matrix:
+97        0         2         0         2         
+0         69        3         0         0         
+0         0         77        0         0         
+0         0         0         119       0         
+0         0         0         0         76        
+
+(c) Classification report:
                precision    recall  f1-score   support
 
-     business       0.99      0.97      0.98       105
-entertainment       0.96      0.99      0.97        72
-     politics       0.95      0.98      0.96        92
-        sport       1.00      0.99      1.00       104
-         tech       0.97      0.94      0.96        72
+     business       1.00      0.96      0.98       101
+entertainment       1.00      0.96      0.98        72
+     politics       0.94      1.00      0.97        77
+        sport       1.00      1.00      1.00       119
+         tech       0.97      1.00      0.99        76
 
      accuracy                           0.98       445
-    macro avg       0.97      0.97      0.97       445
- weighted avg       0.98      0.98      0.98       445
-(d) More detailed accuracy: 0.9752808988764045
-More detailed macro-average F1: 0.9752808988764045
-More detailed weighted-average F1: 0.9753250499856171
-(e) prior probability of each class:
-Class: business 0.22752808988764045
-Class: entertainment 0.17640449438202246
-Class: politics 0.18258426966292135
-Class: sport 0.22865168539325842
-Class: tech 0.18483146067415732
+    macro avg       0.98      0.98      0.98       445
+ weighted avg       0.99      0.98      0.98       445
 
-(f) size of the vocabulary:
-There are 29421 different words
+(d) More detailed accuracy: 0.9842696629213483
+More detailed macro-average F1: 0.9842696629213483
+More detailed weighted-average F1: 0.9843129987217241
 
-(g) number of word-tokens by class:
+(e) Prior probability of each class:
+Class business: 0.22977528089887642
+Class entertainment: 0.17640449438202246
+Class politics: 0.19101123595505617
+Class sport: 0.2202247191011236
+Class tech: 0.18258426966292135
+
+(f) Size of the vocabulary:
+There are 29421 different words.
+
+(g) Number of word-tokens by class:
+Class business: 132332.0 words in total.
+Class entertainment: 103878.0 words in total.
+Class politics: 150910.0 words in total.
+Class sport: 122537.0 words in total.
+Class tech: 161679.0 words in total.
+
+(h) Number of word-tokens in the entire corpus:
+There are 671336.0 words in total in the entire corpus.
+
+(i) Number and percentage of words with a frequency of zero in each class:
+Class business: 18650 words with frequency of zero. This is 63.39009551000986% of the words.
+Class entertainment: 18756 words with frequency of zero. This is 63.7503823799327% of the words.
+Class politics: 19100 words with frequency of zero. This is 64.91961524081438% of the words.
+Class sport: 20139 words with frequency of zero. This is 68.45110635260528% of the words.
+Class tech: 18204 words with frequency of zero. This is 61.874171510145814% of the words.
+
+(j) Number and percentage of words with a frequency of one in the entire corpus:
+There are 9499 words that appear only once in the entire corpus. This is 32.286462050916015% of the words.
+
+(k) Two favorite words and their log-prob:
+Log probabilities for the word apple: 
+Class business: -11.9938257593318
+Class entertainment: -10.414055643143302
+Class politics: -12.10254933007495
+Class sport: -11.238212265296752
+Class tech: -7.163339856464249
+
+Log probabilities for the word parked: 
+Class business: -11.9938257593318
+Class entertainment: -11.800350004263192
+Class politics: -12.10254933007495
+Class sport: -11.931359445856698
+Class tech: -12.160552130228364
 
 (a) ***************  MultinomialNB default values, try 2  ***************
-(b) confusion_matrix:
-102       0         2         0         1         
-0         71        0         0         1         
-1         1         90        0         0         
-0         0         1         103       0         
-0         2         2         0         68        
-(c) classification report:
+
+(b) Confusion_matrix:
+97        0         2         0         2         
+0         69        3         0         0         
+0         0         77        0         0         
+0         0         0         119       0         
+0         0         0         0         76        
+
+(c) Classification report:
                precision    recall  f1-score   support
 
-     business       0.99      0.97      0.98       105
-entertainment       0.96      0.99      0.97        72
-     politics       0.95      0.98      0.96        92
-        sport       1.00      0.99      1.00       104
-         tech       0.97      0.94      0.96        72
+     business       1.00      0.96      0.98       101
+entertainment       1.00      0.96      0.98        72
+     politics       0.94      1.00      0.97        77
+        sport       1.00      1.00      1.00       119
+         tech       0.97      1.00      0.99        76
 
      accuracy                           0.98       445
-    macro avg       0.97      0.97      0.97       445
- weighted avg       0.98      0.98      0.98       445
-(d) More detailed accuracy: 0.9752808988764045
-More detailed macro-average F1: 0.9752808988764045
-More detailed weighted-average F1: 0.9753250499856171
-(e) prior probability of each class:
-Class: business 0.22752808988764045
-Class: entertainment 0.17640449438202246
-Class: politics 0.18258426966292135
-Class: sport 0.22865168539325842
-Class: tech 0.18483146067415732
+    macro avg       0.98      0.98      0.98       445
+ weighted avg       0.99      0.98      0.98       445
 
-(f) size of the vocabulary:
-There are 29421 different words
+(d) More detailed accuracy: 0.9842696629213483
+More detailed macro-average F1: 0.9842696629213483
+More detailed weighted-average F1: 0.9843129987217241
 
-(g) number of word-tokens by class:
+(e) Prior probability of each class:
+Class business: 0.22977528089887642
+Class entertainment: 0.17640449438202246
+Class politics: 0.19101123595505617
+Class sport: 0.2202247191011236
+Class tech: 0.18258426966292135
+
+(f) Size of the vocabulary:
+There are 29421 different words.
+
+(g) Number of word-tokens by class:
+Class business: 132332.0 words in total.
+Class entertainment: 103878.0 words in total.
+Class politics: 150910.0 words in total.
+Class sport: 122537.0 words in total.
+Class tech: 161679.0 words in total.
+
+(h) Number of word-tokens in the entire corpus:
+There are 671336.0 words in total in the entire corpus.
+
+(i) Number and percentage of words with a frequency of zero in each class:
+Class business: 18650 words with frequency of zero. This is 63.39009551000986% of the words.
+Class entertainment: 18756 words with frequency of zero. This is 63.7503823799327% of the words.
+Class politics: 19100 words with frequency of zero. This is 64.91961524081438% of the words.
+Class sport: 20139 words with frequency of zero. This is 68.45110635260528% of the words.
+Class tech: 18204 words with frequency of zero. This is 61.874171510145814% of the words.
+
+(j) Number and percentage of words with a frequency of one in the entire corpus:
+There are 9499 words that appear only once in the entire corpus. This is 32.286462050916015% of the words.
+
+(k) Two favorite words and their log-prob:
+Log probabilities for the word apple: 
+Class business: -11.9938257593318
+Class entertainment: -10.414055643143302
+Class politics: -12.10254933007495
+Class sport: -11.238212265296752
+Class tech: -7.163339856464249
+
+Log probabilities for the word parked: 
+Class business: -11.9938257593318
+Class entertainment: -11.800350004263192
+Class politics: -12.10254933007495
+Class sport: -11.931359445856698
+Class tech: -12.160552130228364
 
 (a) ***************  MultinomialNB smoothing value 0.0001, try 1  ***************
-(b) confusion_matrix:
-101       1         2         0         1         
-0         71        0         0         1         
-1         0         91        0         0         
-0         0         1         103       0         
-0         2         2         0         68        
-(c) classification report:
+
+(b) Confusion_matrix:
+97        0         1         0         3         
+0         71        1         0         0         
+0         1         76        0         0         
+0         0         0         119       0         
+0         1         0         0         75        
+
+(c) Classification report:
                precision    recall  f1-score   support
 
-     business       0.99      0.96      0.98       105
-entertainment       0.96      0.99      0.97        72
-     politics       0.95      0.99      0.97        92
-        sport       1.00      0.99      1.00       104
-         tech       0.97      0.94      0.96        72
+     business       1.00      0.96      0.98       101
+entertainment       0.97      0.99      0.98        72
+     politics       0.97      0.99      0.98        77
+        sport       1.00      1.00      1.00       119
+         tech       0.96      0.99      0.97        76
 
      accuracy                           0.98       445
-    macro avg       0.97      0.97      0.97       445
+    macro avg       0.98      0.98      0.98       445
  weighted avg       0.98      0.98      0.98       445
-(d) More detailed accuracy: 0.9752808988764045
-More detailed macro-average F1: 0.9752808988764045
-More detailed weighted-average F1: 0.97530410378289
-(e) prior probability of each class:
-Class: business 0.22752808988764045
-Class: entertainment 0.17640449438202246
-Class: politics 0.18258426966292135
-Class: sport 0.22865168539325842
-Class: tech 0.18483146067415732
 
-(f) size of the vocabulary:
-There are 29421 different words
+(d) More detailed accuracy: 0.9842696629213483
+More detailed macro-average F1: 0.9842696629213483
+More detailed weighted-average F1: 0.9842822297359799
 
-(g) number of word-tokens by class:
+(e) Prior probability of each class:
+Class business: 0.22977528089887642
+Class entertainment: 0.17640449438202246
+Class politics: 0.19101123595505617
+Class sport: 0.2202247191011236
+Class tech: 0.18258426966292135
+
+(f) Size of the vocabulary:
+There are 29421 different words.
+
+(g) Number of word-tokens by class:
+Class business: 132332.0 words in total.
+Class entertainment: 103878.0 words in total.
+Class politics: 150910.0 words in total.
+Class sport: 122537.0 words in total.
+Class tech: 161679.0 words in total.
+
+(h) Number of word-tokens in the entire corpus:
+There are 671336.0 words in total in the entire corpus.
+
+(i) Number and percentage of words with a frequency of zero in each class:
+Class business: 18650 words with frequency of zero. This is 63.39009551000986% of the words.
+Class entertainment: 18756 words with frequency of zero. This is 63.7503823799327% of the words.
+Class politics: 19100 words with frequency of zero. This is 64.91961524081438% of the words.
+Class sport: 20139 words with frequency of zero. This is 68.45110635260528% of the words.
+Class tech: 18204 words with frequency of zero. This is 61.874171510145814% of the words.
+
+(j) Number and percentage of words with a frequency of one in the entire corpus:
+There are 9499 words that appear only once in the entire corpus. This is 32.286462050916015% of the words.
+
+(k) Two favorite words and their log-prob:
+Log probabilities for the word apple: 
+Class business: -21.00343179983046
+Class entertainment: -10.452355113407874
+Class politics: -21.13479877912467
+Class sport: -11.716092318780424
+Class tech: -7.002953096953755
+
+Log probabilities for the word parked: 
+Class business: -21.00343179983046
+Class entertainment: -20.761341106829956
+Class politics: -21.13479877912467
+Class sport: -20.92653268575694
+Class tech: -21.203726735980553
 
 (a) ***************  MultinomialNB smoothing value 0.9, try 1  ***************
-(b) confusion_matrix:
-102       0         2         0         1         
-0         71        0         0         1         
-1         1         90        0         0         
-0         0         1         103       0         
-0         2         2         0         68        
-(c) classification report:
+
+(b) Confusion_matrix:
+97        0         2         0         2         
+0         69        3         0         0         
+0         0         77        0         0         
+0         0         0         119       0         
+0         0         0         0         76        
+
+(c) Classification report:
                precision    recall  f1-score   support
 
-     business       0.99      0.97      0.98       105
-entertainment       0.96      0.99      0.97        72
-     politics       0.95      0.98      0.96        92
-        sport       1.00      0.99      1.00       104
-         tech       0.97      0.94      0.96        72
+     business       1.00      0.96      0.98       101
+entertainment       1.00      0.96      0.98        72
+     politics       0.94      1.00      0.97        77
+        sport       1.00      1.00      1.00       119
+         tech       0.97      1.00      0.99        76
 
      accuracy                           0.98       445
-    macro avg       0.97      0.97      0.97       445
- weighted avg       0.98      0.98      0.98       445
-(d) More detailed accuracy: 0.9752808988764045
-More detailed macro-average F1: 0.9752808988764045
-More detailed weighted-average F1: 0.9753250499856171
-(e) prior probability of each class:
-Class: business 0.22752808988764045
-Class: entertainment 0.17640449438202246
-Class: politics 0.18258426966292135
-Class: sport 0.22865168539325842
-Class: tech 0.18483146067415732
+    macro avg       0.98      0.98      0.98       445
+ weighted avg       0.99      0.98      0.98       445
 
-(f) size of the vocabulary:
-There are 29421 different words
+(d) More detailed accuracy: 0.9842696629213483
+More detailed macro-average F1: 0.9842696629213483
+More detailed weighted-average F1: 0.9843129987217241
 
-(g) number of word-tokens by class:
+(e) Prior probability of each class:
+Class business: 0.22977528089887642
+Class entertainment: 0.17640449438202246
+Class politics: 0.19101123595505617
+Class sport: 0.2202247191011236
+Class tech: 0.18258426966292135
+
+(f) Size of the vocabulary:
+There are 29421 different words.
+
+(g) Number of word-tokens by class:
+Class business: 132332.0 words in total.
+Class entertainment: 103878.0 words in total.
+Class politics: 150910.0 words in total.
+Class sport: 122537.0 words in total.
+Class tech: 161679.0 words in total.
+
+(h) Number of word-tokens in the entire corpus:
+There are 671336.0 words in total in the entire corpus.
+
+(i) Number and percentage of words with a frequency of zero in each class:
+Class business: 18650 words with frequency of zero. This is 63.39009551000986% of the words.
+Class entertainment: 18756 words with frequency of zero. This is 63.7503823799327% of the words.
+Class politics: 19100 words with frequency of zero. This is 64.91961524081438% of the words.
+Class sport: 20139 words with frequency of zero. This is 68.45110635260528% of the words.
+Class tech: 18204 words with frequency of zero. This is 61.874171510145814% of the words.
+
+(j) Number and percentage of words with a frequency of one in the entire corpus:
+There are 9499 words that appear only once in the entire corpus. This is 32.286462050916015% of the words.
+
+(k) Two favorite words and their log-prob:
+Log probabilities for the word apple: 
+Class business: -12.080829980895885
+Class entertainment: -10.417054799232435
+Class politics: -12.191460292095599
+Class sport: -11.26995440447134
+Class tech: -7.148500413199079
+
+Log probabilities for the word parked: 
+Class business: -12.080829980895885
+Class entertainment: -11.883391868025862
+Class politics: -12.191460292095599
+Class sport: -12.017168806301562
+Class tech: -12.25039729857366
 

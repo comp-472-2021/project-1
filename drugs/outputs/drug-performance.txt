@@ -2,28 +2,28 @@
  
 ***** A) NB Classifier *****
 Parameters: default
-Confusion matrix: [[ 3  0  0  0  0]
- [ 0  3  0  0  0]
+Confusion matrix: [[ 4  2  0  0  0]
+ [ 0  4  0  0  0]
  [ 0  0  5  0  0]
- [ 0  0  0 15  0]
- [ 3  1  3  0 17]]
-Precision: 0.9175
+ [ 0  0  0 13  0]
+ [ 1  1  3  0 17]]
+Precision: 0.9042142857142857
 Recall: 0.86
-F1 score: [0.66666667 0.85714286 0.76923077 1.         0.82926829]
+F1 score: [0.72727273 0.72727273 0.76923077 1.         0.87179487]
 Accuracy: 0.86
-Macro-average F1 score: 0.8244617171446439
-Weighted-average F1 score: 0.8664004288394531
+Macro-average F1 score: 0.8191142191142191
+Weighted-average F1 score: 0.865967365967366
  
 ***** B) Decision Tree *****
 Parameters: default
-Confusion matrix: [[ 3  0  0  0  0]
- [ 0  3  0  0  0]
+Confusion matrix: [[ 5  1  0  0  0]
+ [ 0  4  0  0  0]
  [ 0  0  5  0  0]
- [ 0  0  0 15  0]
- [ 0  0  0  0 24]]
-Precision: 1.0
-Recall: 1.0
-F1 score: [1. 1. 1. 1. 1.]
-Accuracy: 1.0
-Macro-average F1 score: 1.0
-Weighted-average F1 score: 1.0
+ [ 0  0  0 13  0]
+ [ 0  0  0  0 22]]
+Precision: 0.9840000000000001
+Recall: 0.98
+F1 score: [0.90909091 0.88888889 1.         1.         1.        ]
+Accuracy: 0.98
+Macro-average F1 score: 0.9595959595959596
+Weighted-average F1 score: 0.9802020202020202
