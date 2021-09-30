@@ -19,39 +19,71 @@ def train_classifier(X_train, y_train, X_test, y_test, output, target_name, desc
 
     # Question 7
 
+    number_of_classes = len(target_name)
     output.write("(a) ***************  " + description + "  ***************\n")
 
     y_predict = classifier.predict(X_test)
     confusion_matrix = cm(y_test, y_predict)
 
-    output.write("(b) confusion_matrix:\n")
+    output.write("\n(b) Confusion_matrix:\n")
     for column in confusion_matrix:
         for value in column:
             output.write(str(value) + " " * (10 - len(str(value))))
         output.write("\n")
 
-    output.write("(c) classification report:\n")
+    output.write("\n(c) Classification report:\n")
     output.write(classification_report(y_test, y_predict, target_names=target_name))
 
-    output.write("(d) More detailed accuracy: " + str(accuracy_score(y_test, y_predict)) + "\n")
+    output.write("\n(d) More detailed accuracy: " + str(accuracy_score(y_test, y_predict)) + "\n")
     output.write(
         "More detailed macro-average F1: " + str(
             f1_score(y_test, y_predict, average="micro")) + "\n")
     output.write("More detailed weighted-average F1: " + str(
         f1_score(y_test, y_predict, average="weighted")) + "\n")
 
-    output.write("(e) prior probability of each class:\n")
+    output.write("\n(e) Prior probability of each class:\n")
     y_list = y_train.tolist()
-    for x in range(0, 5):
+    for x in range(0, number_of_classes):
         y_list_class = y_list.count(x)
         prior_y_list = y_list_class / len(y_list)
-        output.write(f"Class: {target_name[x]} {prior_y_list}\n")
+        output.write(f"Class {target_name[x]}: {prior_y_list}\n")
 
-    output.write("\n(f) size of the vocabulary:\n")
+    output.write("\n(f) Size of the vocabulary:\n")
     number_of_different_words = X_train.shape[1]
-    output.write(f"There are {number_of_different_words} different words\n")
+    output.write(f"There are {number_of_different_words} different words.\n")
 
-    output.write("\n(g) number of word-tokens by class:\n")
+    output.write("\n(g) Number of word-tokens by class:\n")
+    number_of_words_each_class = multinomialNB.feature_count_.sum(axis=1)
+    for x in range(0, number_of_classes):
+        output.write(f"Class {target_name[x]}: {number_of_words_each_class[x]} words in total.\n")
+
+    output.write("\n(h) Number of word-tokens in the entire corpus:\n")
+    output.write(f"There are {number_of_words_each_class.sum(axis=0)} words in total in the entire corpus.\n")
+
+    output.write("\n(i) Number and percentage of words with a frequency of zero in each class:\n")
+    for x in range(0, number_of_classes):
+        number_of_zeroes = numpy.count_nonzero(multinomialNB.feature_count_[x] == 0)
+        output.write(f"Class {target_name[x]}: {number_of_zeroes} words with "
+                     f"frequency of zero. This is {number_of_zeroes*100/number_of_different_words}% of the words.\n")
+
+    output.write("\n(j) Number and percentage of words with a frequency of one in the entire corpus:\n")
+    frequency_of_words_in_corpus = multinomialNB.feature_count_.sum(axis=0)
+    number_of_ones = numpy.count_nonzero(frequency_of_words_in_corpus == 1)
+    output.write(f"There are {number_of_ones} words that appear only once in the entire corpus. This is {number_of_ones*100/number_of_different_words}% of the words.\n")
+
+    output.write("\n(k) Two favorite words and their log-prob:\n")
+    # Word 1: apple (indice: 2639), word 2: parked (indice: 19453) found with count_vectorizer.vocabulary_
+    output.write("Log probabilities for the word apple: \n")
+    for x in range(0, number_of_classes):
+        feature_log_prob = multinomialNB.feature_log_prob_[x,2639]
+        output.write(f"Class {target_name[x]}: {feature_log_prob}\n")
+    output.write("\nLog probabilities for the word parked: \n")
+    for x in range(0, number_of_classes):
+        feature_log_prob = multinomialNB.feature_log_prob_[x, 19453]
+        output.write(f"Class {target_name[x]}: {feature_log_prob}\n")
+
+
+
 
     output.write("\n")
     # print(numpy.mean(y_predict == y_test))
