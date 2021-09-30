@@ -1,22 +1,136 @@
 (a) ***************  MultinomialNB default values, try 1  ***************
 (b) confusion_matrix:
-107       0         3         0         1         
-0         76        1         0         2         
-1         0         89        0         0         
-0         1         0         80        0         
-0         0         0         0         84        
+102       0         2         0         1         
+0         71        0         0         1         
+1         1         90        0         0         
+0         0         1         103       0         
+0         2         2         0         68        
 (c) classification report:
                precision    recall  f1-score   support
 
-     business       0.99      0.96      0.98       111
-entertainment       0.99      0.96      0.97        79
-     politics       0.96      0.99      0.97        90
-        sport       1.00      0.99      0.99        81
-         tech       0.97      1.00      0.98        84
+     business       0.99      0.97      0.98       105
+entertainment       0.96      0.99      0.97        72
+     politics       0.95      0.98      0.96        92
+        sport       1.00      0.99      1.00       104
+         tech       0.97      0.94      0.96        72
 
      accuracy                           0.98       445
-    macro avg       0.98      0.98      0.98       445
+    macro avg       0.97      0.97      0.97       445
  weighted avg       0.98      0.98      0.98       445
-(d) More detailed accuracy: 0.9797752808988764
-More detailed macro-average F1: 0.9797752808988764
-More detailed weighted-average F1: 0.9797849577640122
+(d) More detailed accuracy: 0.9752808988764045
+More detailed macro-average F1: 0.9752808988764045
+More detailed weighted-average F1: 0.9753250499856171
+(e) prior probability of each class:
+Class: business 0.22752808988764045
+Class: entertainment 0.17640449438202246
+Class: politics 0.18258426966292135
+Class: sport 0.22865168539325842
+Class: tech 0.18483146067415732
+
+(f) size of the vocabulary:
+There are 29421 different words
+
+(g) number of word-tokens by class:
+
+(a) ***************  MultinomialNB default values, try 2  ***************
+(b) confusion_matrix:
+102       0         2         0         1         
+0         71        0         0         1         
+1         1         90        0         0         
+0         0         1         103       0         
+0         2         2         0         68        
+(c) classification report:
+               precision    recall  f1-score   support
+
+     business       0.99      0.97      0.98       105
+entertainment       0.96      0.99      0.97        72
+     politics       0.95      0.98      0.96        92
+        sport       1.00      0.99      1.00       104
+         tech       0.97      0.94      0.96        72
+
+     accuracy                           0.98       445
+    macro avg       0.97      0.97      0.97       445
+ weighted avg       0.98      0.98      0.98       445
+(d) More detailed accuracy: 0.9752808988764045
+More detailed macro-average F1: 0.9752808988764045
+More detailed weighted-average F1: 0.9753250499856171
+(e) prior probability of each class:
+Class: business 0.22752808988764045
+Class: entertainment 0.17640449438202246
+Class: politics 0.18258426966292135
+Class: sport 0.22865168539325842
+Class: tech 0.18483146067415732
+
+(f) size of the vocabulary:
+There are 29421 different words
+
+(g) number of word-tokens by class:
+
+(a) ***************  MultinomialNB smoothing value 0.0001, try 1  ***************
+(b) confusion_matrix:
+101       1         2         0         1         
+0         71        0         0         1         
+1         0         91        0         0         
+0         0         1         103       0         
+0         2         2         0         68        
+(c) classification report:
+               precision    recall  f1-score   support
+
+     business       0.99      0.96      0.98       105
+entertainment       0.96      0.99      0.97        72
+     politics       0.95      0.99      0.97        92
+        sport       1.00      0.99      1.00       104
+         tech       0.97      0.94      0.96        72
+
+     accuracy                           0.98       445
+    macro avg       0.97      0.97      0.97       445
+ weighted avg       0.98      0.98      0.98       445
+(d) More detailed accuracy: 0.9752808988764045
+More detailed macro-average F1: 0.9752808988764045
+More detailed weighted-average F1: 0.97530410378289
+(e) prior probability of each class:
+Class: business 0.22752808988764045
+Class: entertainment 0.17640449438202246
+Class: politics 0.18258426966292135
+Class: sport 0.22865168539325842
+Class: tech 0.18483146067415732
+
+(f) size of the vocabulary:
+There are 29421 different words
+
+(g) number of word-tokens by class:
+
+(a) ***************  MultinomialNB smoothing value 0.9, try 1  ***************
+(b) confusion_matrix:
+102       0         2         0         1         
+0         71        0         0         1         
+1         1         90        0         0         
+0         0         1         103       0         
+0         2         2         0         68        
+(c) classification report:
+               precision    recall  f1-score   support
+
+     business       0.99      0.97      0.98       105
+entertainment       0.96      0.99      0.97        72
+     politics       0.95      0.98      0.96        92
+        sport       1.00      0.99      1.00       104
+         tech       0.97      0.94      0.96        72
+
+     accuracy                           0.98       445
+    macro avg       0.97      0.97      0.97       445
+ weighted avg       0.98      0.98      0.98       445
+(d) More detailed accuracy: 0.9752808988764045
+More detailed macro-average F1: 0.9752808988764045
+More detailed weighted-average F1: 0.9753250499856171
+(e) prior probability of each class:
+Class: business 0.22752808988764045
+Class: entertainment 0.17640449438202246
+Class: politics 0.18258426966292135
+Class: sport 0.22865168539325842
+Class: tech 0.18483146067415732
+
+(f) size of the vocabulary:
+There are 29421 different words
+
+(g) number of word-tokens by class:
+
