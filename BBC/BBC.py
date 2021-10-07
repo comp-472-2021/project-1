@@ -37,7 +37,7 @@ def train_classifier(X_train, y_train, X_test, y_test, output, target_name, desc
     output.write("\n(d) More detailed accuracy: " + str(accuracy_score(y_test, y_predict)) + "\n")
     output.write(
         "More detailed macro-average F1: " + str(
-            f1_score(y_test, y_predict, average="micro")) + "\n")
+            f1_score(y_test, y_predict, average="macro")) + "\n")
     output.write("More detailed weighted-average F1: " + str(
         f1_score(y_test, y_predict, average="weighted")) + "\n")
 
