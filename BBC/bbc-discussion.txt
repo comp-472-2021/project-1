@@ -1,0 +1,9 @@
+Question 11
+(a) Accuracy should be the best suited to this dataset. Based on the "bbc-distribution.pdf" graph got from step 2. 
+It can be considered as a balanced dataset and different classes are equally important.
+Therefore, the accuracy should be used for evaluation.
+
+(b) The performance of step 8 is the same as step 7 since they have the same smoothing value and they have the same traning and testing dataset split.
+The performance of step 9 is different than step 7 since it has a significantly different smoothing value.
+The performance of step 10 is different than step 7 sometime since it has a different smoothing value.
+However, sometime they are the same since the smoothing value are so close to each other and they have the same traning and testing dataset split.
