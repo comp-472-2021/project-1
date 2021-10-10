@@ -1,284 +1,284 @@
 (a) ***************  MultinomialNB default values, try 1  ***************
 
 (b) Confusion_matrix:
-108       0         2         0         1         
-0         70        0         0         1         
-1         0         77        0         1         
-1         0         0         98        0         
-0         0         1         0         84        
+111       0         1         0         5         
+0         73        0         0         2         
+0         0         83        0         1         
+0         0         0         85        0         
+0         1         1         0         82        
 
 (c) Classification report:
                precision    recall  f1-score   support
 
-     business       0.98      0.97      0.98       111
-entertainment       1.00      0.99      0.99        71
-     politics       0.96      0.97      0.97        79
-        sport       1.00      0.99      0.99        99
-         tech       0.97      0.99      0.98        85
+     business       1.00      0.95      0.97       117
+entertainment       0.99      0.97      0.98        75
+     politics       0.98      0.99      0.98        84
+        sport       1.00      1.00      1.00        85
+         tech       0.91      0.98      0.94        84
 
      accuracy                           0.98       445
-    macro avg       0.98      0.98      0.98       445
+    macro avg       0.97      0.98      0.98       445
  weighted avg       0.98      0.98      0.98       445
 
-(d) More detailed accuracy: 0.9820224719101124
-More detailed macro-average F1: 0.9821009740126657
-More detailed weighted-average F1: 0.9820709723524549
+(d) More detailed accuracy: 0.9752808988764045
+More detailed macro-average F1: 0.9756654477361278
+More detailed weighted-average F1: 0.9754882585398502
 
 (e) Prior probability of each class:
-Class business: 0.22415730337078651
-Class entertainment: 0.17696629213483145
-Class politics: 0.1898876404494382
-Class sport: 0.23146067415730337
-Class tech: 0.17752808988764046
+Class business: 0.22078651685393258
+Class entertainment: 0.1747191011235955
+Class politics: 0.18707865168539325
+Class sport: 0.2393258426966292
+Class tech: 0.17808988764044945
 
 (f) Size of the vocabulary:
 There are 29421 different words.
 
 (g) Number of word-tokens by class:
-Class business: 127421.0 words in total.
-Class entertainment: 104603.0 words in total.
-Class politics: 147898.0 words in total.
-Class sport: 129593.0 words in total.
-Class tech: 156684.0 words in total.
+Class business: 129143.0 words in total.
+Class entertainment: 99983.0 words in total.
+Class politics: 149773.0 words in total.
+Class sport: 137951.0 words in total.
+Class tech: 157216.0 words in total.
 
 (h) Number of word-tokens in the entire corpus:
-There are 666199.0 words in total in the entire corpus.
+There are 674066.0 words in total in the entire corpus.
 
 (i) Number and percentage of words with a frequency of zero in each class:
-Class business: 18842 words with frequency of zero. This is 64.04269059515312% of the words.
-Class entertainment: 18726 words with frequency of zero. This is 63.648414397879066% of the words.
-Class politics: 19171 words with frequency of zero. This is 65.16093946500798% of the words.
-Class sport: 19952 words with frequency of zero. This is 67.81550593113762% of the words.
-Class tech: 18298 words with frequency of zero. This is 62.193671187247205% of the words.
+Class business: 18870 words with frequency of zero. This is 64.13786071173651% of the words.
+Class entertainment: 19022 words with frequency of zero. This is 64.65449848747494% of the words.
+Class politics: 19119 words with frequency of zero. This is 64.98419496278169% of the words.
+Class sport: 19613 words with frequency of zero. This is 66.66326773393155% of the words.
+Class tech: 18197 words with frequency of zero. This is 61.85037898099996% of the words.
 
 (j) Number and percentage of words with a frequency of one in the entire corpus:
-There are 9505 words that appear only once in the entire corpus. This is 32.30685564732674% of the words.
+There are 9576 words that appear only once in the entire corpus. This is 32.54817987152034% of the words.
 
 (k) Two favorite words and their log-prob:
 Log probabilities for the word apple: 
-Class business: -11.962994208173981
-Class entertainment: -10.419479806253477
-Class politics: -12.08570564932132
-Class sport: -11.283600347080688
-Class tech: -7.143633722766346
+Class business: -11.973913576289009
+Class entertainment: -10.384400211352366
+Class politics: -12.096224296819571
+Class sport: -11.334826978449145
+Class tech: -7.119640996026386
 
 Log probabilities for the word parked: 
-Class business: -11.962994208173981
-Class entertainment: -11.805774167373368
-Class politics: -12.08570564932132
-Class sport: -11.976747527640633
-Class tech: -11.440919128985136
+Class business: -11.973913576289009
+Class entertainment: -11.770694572472257
+Class politics: -12.096224296819571
+Class sport: -12.02797415900909
+Class tech: -12.13692083284131
 
 (a) ***************  MultinomialNB default values, try 2  ***************
 
 (b) Confusion_matrix:
-108       0         2         0         1         
-0         70        0         0         1         
-1         0         77        0         1         
-1         0         0         98        0         
-0         0         1         0         84        
+111       0         1         0         5         
+0         73        0         0         2         
+0         0         83        0         1         
+0         0         0         85        0         
+0         1         1         0         82        
 
 (c) Classification report:
                precision    recall  f1-score   support
 
-     business       0.98      0.97      0.98       111
-entertainment       1.00      0.99      0.99        71
-     politics       0.96      0.97      0.97        79
-        sport       1.00      0.99      0.99        99
-         tech       0.97      0.99      0.98        85
+     business       1.00      0.95      0.97       117
+entertainment       0.99      0.97      0.98        75
+     politics       0.98      0.99      0.98        84
+        sport       1.00      1.00      1.00        85
+         tech       0.91      0.98      0.94        84
 
      accuracy                           0.98       445
-    macro avg       0.98      0.98      0.98       445
+    macro avg       0.97      0.98      0.98       445
  weighted avg       0.98      0.98      0.98       445
 
-(d) More detailed accuracy: 0.9820224719101124
-More detailed macro-average F1: 0.9821009740126657
-More detailed weighted-average F1: 0.9820709723524549
+(d) More detailed accuracy: 0.9752808988764045
+More detailed macro-average F1: 0.9756654477361278
+More detailed weighted-average F1: 0.9754882585398502
 
 (e) Prior probability of each class:
-Class business: 0.22415730337078651
-Class entertainment: 0.17696629213483145
-Class politics: 0.1898876404494382
-Class sport: 0.23146067415730337
-Class tech: 0.17752808988764046
+Class business: 0.22078651685393258
+Class entertainment: 0.1747191011235955
+Class politics: 0.18707865168539325
+Class sport: 0.2393258426966292
+Class tech: 0.17808988764044945
 
 (f) Size of the vocabulary:
 There are 29421 different words.
 
 (g) Number of word-tokens by class:
-Class business: 127421.0 words in total.
-Class entertainment: 104603.0 words in total.
-Class politics: 147898.0 words in total.
-Class sport: 129593.0 words in total.
-Class tech: 156684.0 words in total.
+Class business: 129143.0 words in total.
+Class entertainment: 99983.0 words in total.
+Class politics: 149773.0 words in total.
+Class sport: 137951.0 words in total.
+Class tech: 157216.0 words in total.
 
 (h) Number of word-tokens in the entire corpus:
-There are 666199.0 words in total in the entire corpus.
+There are 674066.0 words in total in the entire corpus.
 
 (i) Number and percentage of words with a frequency of zero in each class:
-Class business: 18842 words with frequency of zero. This is 64.04269059515312% of the words.
-Class entertainment: 18726 words with frequency of zero. This is 63.648414397879066% of the words.
-Class politics: 19171 words with frequency of zero. This is 65.16093946500798% of the words.
-Class sport: 19952 words with frequency of zero. This is 67.81550593113762% of the words.
-Class tech: 18298 words with frequency of zero. This is 62.193671187247205% of the words.
+Class business: 18870 words with frequency of zero. This is 64.13786071173651% of the words.
+Class entertainment: 19022 words with frequency of zero. This is 64.65449848747494% of the words.
+Class politics: 19119 words with frequency of zero. This is 64.98419496278169% of the words.
+Class sport: 19613 words with frequency of zero. This is 66.66326773393155% of the words.
+Class tech: 18197 words with frequency of zero. This is 61.85037898099996% of the words.
 
 (j) Number and percentage of words with a frequency of one in the entire corpus:
-There are 9505 words that appear only once in the entire corpus. This is 32.30685564732674% of the words.
+There are 9576 words that appear only once in the entire corpus. This is 32.54817987152034% of the words.
 
 (k) Two favorite words and their log-prob:
 Log probabilities for the word apple: 
-Class business: -11.962994208173981
-Class entertainment: -10.419479806253477
-Class politics: -12.08570564932132
-Class sport: -11.283600347080688
-Class tech: -7.143633722766346
+Class business: -11.973913576289009
+Class entertainment: -10.384400211352366
+Class politics: -12.096224296819571
+Class sport: -11.334826978449145
+Class tech: -7.119640996026386
 
 Log probabilities for the word parked: 
-Class business: -11.962994208173981
-Class entertainment: -11.805774167373368
-Class politics: -12.08570564932132
-Class sport: -11.976747527640633
-Class tech: -11.440919128985136
+Class business: -11.973913576289009
+Class entertainment: -11.770694572472257
+Class politics: -12.096224296819571
+Class sport: -12.02797415900909
+Class tech: -12.13692083284131
 
 (a) ***************  MultinomialNB smoothing value 0.0001, try 1  ***************
 
 (b) Confusion_matrix:
-108       0         1         0         2         
-0         70        0         0         1         
-2         0         76        0         1         
-1         0         0         98        0         
-0         0         1         0         84        
+111       0         0         0         6         
+0         73        0         0         2         
+0         0         83        0         1         
+0         0         0         85        0         
+1         1         0         0         82        
 
 (c) Classification report:
                precision    recall  f1-score   support
 
-     business       0.97      0.97      0.97       111
-entertainment       1.00      0.99      0.99        71
-     politics       0.97      0.96      0.97        79
-        sport       1.00      0.99      0.99        99
-         tech       0.95      0.99      0.97        85
+     business       0.99      0.95      0.97       117
+entertainment       0.99      0.97      0.98        75
+     politics       1.00      0.99      0.99        84
+        sport       1.00      1.00      1.00        85
+         tech       0.90      0.98      0.94        84
 
      accuracy                           0.98       445
     macro avg       0.98      0.98      0.98       445
  weighted avg       0.98      0.98      0.98       445
 
-(d) More detailed accuracy: 0.9797752808988764
-More detailed macro-average F1: 0.9800111528794849
-More detailed weighted-average F1: 0.9798232468852142
+(d) More detailed accuracy: 0.9752808988764045
+More detailed macro-average F1: 0.9760905838826645
+More detailed weighted-average F1: 0.9755742014830477
 
 (e) Prior probability of each class:
-Class business: 0.22415730337078651
-Class entertainment: 0.17696629213483145
-Class politics: 0.1898876404494382
-Class sport: 0.23146067415730337
-Class tech: 0.17752808988764046
+Class business: 0.22078651685393258
+Class entertainment: 0.1747191011235955
+Class politics: 0.18707865168539325
+Class sport: 0.2393258426966292
+Class tech: 0.17808988764044945
 
 (f) Size of the vocabulary:
 There are 29421 different words.
 
 (g) Number of word-tokens by class:
-Class business: 127421.0 words in total.
-Class entertainment: 104603.0 words in total.
-Class politics: 147898.0 words in total.
-Class sport: 129593.0 words in total.
-Class tech: 156684.0 words in total.
+Class business: 129143.0 words in total.
+Class entertainment: 99983.0 words in total.
+Class politics: 149773.0 words in total.
+Class sport: 137951.0 words in total.
+Class tech: 157216.0 words in total.
 
 (h) Number of word-tokens in the entire corpus:
-There are 666199.0 words in total in the entire corpus.
+There are 674066.0 words in total in the entire corpus.
 
 (i) Number and percentage of words with a frequency of zero in each class:
-Class business: 18842 words with frequency of zero. This is 64.04269059515312% of the words.
-Class entertainment: 18726 words with frequency of zero. This is 63.648414397879066% of the words.
-Class politics: 19171 words with frequency of zero. This is 65.16093946500798% of the words.
-Class sport: 19952 words with frequency of zero. This is 67.81550593113762% of the words.
-Class tech: 18298 words with frequency of zero. This is 62.193671187247205% of the words.
+Class business: 18870 words with frequency of zero. This is 64.13786071173651% of the words.
+Class entertainment: 19022 words with frequency of zero. This is 64.65449848747494% of the words.
+Class politics: 19119 words with frequency of zero. This is 64.98419496278169% of the words.
+Class sport: 19613 words with frequency of zero. This is 66.66326773393155% of the words.
+Class tech: 18197 words with frequency of zero. This is 61.85037898099996% of the words.
 
 (j) Number and percentage of words with a frequency of one in the entire corpus:
-There are 9505 words that appear only once in the entire corpus. This is 32.30685564732674% of the words.
+There are 9576 words that appear only once in the entire corpus. This is 32.54817987152034% of the words.
 
 (k) Two favorite words and their log-prob:
 Log probabilities for the word apple: 
-Class business: -20.965615305011447
-Class entertainment: -10.459310015392942
-Class politics: -21.114638390499273
-Class sport: -11.77207675645299
-Class tech: -6.978397787664354
+Class business: -20.97903874995235
+Class entertainment: -10.414139254642174
+Class politics: -21.127236109010344
+Class sport: -11.834575160532564
+Class tech: -6.9547586877747225
 
 Log probabilities for the word parked: 
-Class business: -20.965615305011447
-Class entertainment: -20.768296008815025
-Class politics: -21.114638390499273
-Class sport: -20.982517123429503
-Class tech: -11.96190509930363
+Class business: -20.97903874995235
+Class entertainment: -20.723125248064257
+Class politics: -21.127236109010344
+Class sport: -21.04501552750908
+Class tech: -21.175735020513606
 
 (a) ***************  MultinomialNB smoothing value 0.9, try 1  ***************
 
 (b) Confusion_matrix:
-109       0         1         0         1         
-0         70        0         0         1         
-1         0         77        0         1         
-1         0         0         98        0         
-0         0         1         0         84        
+111       0         1         0         5         
+0         74        0         0         1         
+0         0         83        0         1         
+0         0         0         85        0         
+0         1         1         0         82        
 
 (c) Classification report:
                precision    recall  f1-score   support
 
-     business       0.98      0.98      0.98       111
-entertainment       1.00      0.99      0.99        71
-     politics       0.97      0.97      0.97        79
-        sport       1.00      0.99      0.99        99
-         tech       0.97      0.99      0.98        85
+     business       1.00      0.95      0.97       117
+entertainment       0.99      0.99      0.99        75
+     politics       0.98      0.99      0.98        84
+        sport       1.00      1.00      1.00        85
+         tech       0.92      0.98      0.95        84
 
      accuracy                           0.98       445
     macro avg       0.98      0.98      0.98       445
  weighted avg       0.98      0.98      0.98       445
 
-(d) More detailed accuracy: 0.9842696629213483
-More detailed macro-average F1: 0.9842482743237501
-More detailed weighted-average F1: 0.9843082508844869
+(d) More detailed accuracy: 0.9775280898876404
+More detailed macro-average F1: 0.9781152553031516
+More detailed weighted-average F1: 0.977662890280207
 
 (e) Prior probability of each class:
-Class business: 0.22415730337078651
-Class entertainment: 0.17696629213483145
-Class politics: 0.1898876404494382
-Class sport: 0.23146067415730337
-Class tech: 0.17752808988764046
+Class business: 0.22078651685393258
+Class entertainment: 0.1747191011235955
+Class politics: 0.18707865168539325
+Class sport: 0.2393258426966292
+Class tech: 0.17808988764044945
 
 (f) Size of the vocabulary:
 There are 29421 different words.
 
 (g) Number of word-tokens by class:
-Class business: 127421.0 words in total.
-Class entertainment: 104603.0 words in total.
-Class politics: 147898.0 words in total.
-Class sport: 129593.0 words in total.
-Class tech: 156684.0 words in total.
+Class business: 129143.0 words in total.
+Class entertainment: 99983.0 words in total.
+Class politics: 149773.0 words in total.
+Class sport: 137951.0 words in total.
+Class tech: 157216.0 words in total.
 
 (h) Number of word-tokens in the entire corpus:
-There are 666199.0 words in total in the entire corpus.
+There are 674066.0 words in total in the entire corpus.
 
 (i) Number and percentage of words with a frequency of zero in each class:
-Class business: 18842 words with frequency of zero. This is 64.04269059515312% of the words.
-Class entertainment: 18726 words with frequency of zero. This is 63.648414397879066% of the words.
-Class politics: 19171 words with frequency of zero. This is 65.16093946500798% of the words.
-Class sport: 19952 words with frequency of zero. This is 67.81550593113762% of the words.
-Class tech: 18298 words with frequency of zero. This is 62.193671187247205% of the words.
+Class business: 18870 words with frequency of zero. This is 64.13786071173651% of the words.
+Class entertainment: 19022 words with frequency of zero. This is 64.65449848747494% of the words.
+Class politics: 19119 words with frequency of zero. This is 64.98419496278169% of the words.
+Class sport: 19613 words with frequency of zero. This is 66.66326773393155% of the words.
+Class tech: 18197 words with frequency of zero. This is 61.85037898099996% of the words.
 
 (j) Number and percentage of words with a frequency of one in the entire corpus:
-There are 9505 words that appear only once in the entire corpus. This is 32.30685564732674% of the words.
+There are 9576 words that appear only once in the entire corpus. This is 32.54817987152034% of the words.
 
 (k) Two favorite words and their log-prob:
 Log probabilities for the word apple: 
-Class business: -12.049418185712007
-Class entertainment: -10.422601044537007
-Class politics: -12.17433484321358
-Class sport: -11.316218191314578
-Class tech: -7.1283791166172
+Class business: -12.060545141981821
+Class entertainment: -10.386719802877817
+Class politics: -12.18503001641608
+Class sport: -11.368385732374165
+Class tech: -7.104414142387518
 
 Log probabilities for the word parked: 
-Class business: -12.049418185712007
-Class entertainment: -11.888938113330434
-Class politics: -12.17433484321358
-Class sport: -12.0634325931448
-Class tech: -11.476277313624637
+Class business: -12.060545141981821
+Class entertainment: -11.853056871671244
+Class politics: -12.18503001641608
+Class sport: -12.115600134204387
+Class tech: -12.226392023819148
 

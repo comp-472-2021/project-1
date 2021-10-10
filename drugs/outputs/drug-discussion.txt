@@ -1,0 +1,6 @@
+Each model gives slightly different results in comparison with question 7, when retrained in question 8.
+
+Contrary to k-means for example, the given supervised models are deterministic for a given training and testing data set.
+This premise led us to believe that the data set splitting (sklearn.model_selection train_test_split) is the factor that changes the outcome metrics.
+
+Some splits end up training a model that has better performance on the testing set.

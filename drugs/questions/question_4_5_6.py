@@ -1,9 +1,9 @@
 import pandas as panda
 from sklearn.model_selection import train_test_split
 
-from common import clear_prediction_results, set_cwd
+from common import set_cwd
 from drugs.constants import DRUGS_FEATURES
-from drugs.questions.question_6 import NB_classifier, decision_tree, grid_search_tree, \
+from drugs.questions.question_6_7 import NB_classifier, decision_tree, grid_search_tree, \
     grid_search_perceptron, multi_layered_perceptron, perceptron
 
 
@@ -59,26 +59,25 @@ def fetch_drugs_data():
     return train_test_split(fetch_drugs_features_data(), fetch_drugs_target_data())
 
 
-def question4_5_6():
-    clear_prediction_results()
-
+def question4_5_6(file):
     features_train_set, features_test_set, target_train_set, target_test_set = fetch_drugs_data()
 
     # 6 a)
-    NB_classifier(features_train_set, target_train_set, features_test_set, target_test_set)
+    NB_classifier(features_train_set, target_train_set, features_test_set, target_test_set, file)
 
     # 6 b)
-    decision_tree(features_train_set, target_train_set, features_test_set, target_test_set)
+    decision_tree(features_train_set, target_train_set, features_test_set, target_test_set, file)
 
     # 6 c)
-    grid_search_tree(features_train_set, target_train_set, features_test_set, target_test_set)
+    grid_search_tree(features_train_set, target_train_set, features_test_set, target_test_set, file)
 
     # 6 d)
-    perceptron(features_train_set, target_train_set, features_test_set, target_test_set)
+    perceptron(features_train_set, target_train_set, features_test_set, target_test_set, file)
 
     # 6 e)
     multi_layered_perceptron(features_train_set, target_train_set, features_test_set,
-                             target_test_set)
+                             target_test_set, file)
 
     # 6 f)
-    grid_search_perceptron(features_train_set, target_train_set, features_test_set, target_test_set)
+    grid_search_perceptron(features_train_set, target_train_set, features_test_set, target_test_set,
+                           file)

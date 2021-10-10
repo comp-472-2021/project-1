@@ -28,10 +28,9 @@ def clear_prediction_results():
         os.remove(path_to_drug_performance)
 
 
-def output_prediction_results(target_test_set, prediction_results, header, parameters="default"):
+def output_prediction_results(target_test_set, prediction_results, header, file,
+                              parameters="default"):
     set_cwd()
-    file = open("drugs/outputs/drug-performance.txt", 'a+')
-
     performance_content = "\n \n***** " + header + " *****"
 
     performance_content += "\nParameters: " + parameters
@@ -61,9 +60,8 @@ def output_prediction_results(target_test_set, prediction_results, header, param
     file.write(performance_content)
 
 
-def output_hyper_parameters(hyper_parameters, model_name, header):
+def output_hyper_parameters(hyper_parameters, model_name, header, file):
     set_cwd()
-    file = open(path_to_drug_performance, 'a+')
     content = "\n \n***** " + header + " *****"
     content += "\n" + model_name + " Hyper Parameters: " + hyper_parameters
     print(content)
