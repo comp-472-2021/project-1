@@ -2,5 +2,9 @@ Each model gives slightly different results in comparison with question 7, when 
 
 Contrary to k-means for example, the given supervised models are deterministic for a given training and testing data set.
 This premise led us to believe that the data set splitting (sklearn.model_selection train_test_split) is the factor that changes the outcome metrics.
+In order for splitting to have an impact on the trained models' performance it also has to be imbalanced.
+A balanced data set would be reflected in each different splits and give relatively similar models, once trained.
+In our case, as demonstrated in drug-distribution.pdf, there are overrepresented classes like drugY and underrepresented
+classes like drugB.
 
-Some splits end up training a model that has better performance on the testing set.
+Due to an imbalanced data set, some splits end up training a model that has better performance on the testing set.
