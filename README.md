@@ -1,6 +1,6 @@
 # Project 1
 
-## Run text and Drugs Classification
+## Run Text and Drugs Classification
 
     run -> main.py
 
