@@ -4,11 +4,12 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import confusion_matrix as cm, classification_report, f1_score, accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
-
+from BBC.BBC_Q2 import question_2
 from common import set_cwd
 
 
 def main():
+    question_2()
     question_3_4_5_6()
 
 
@@ -104,7 +105,7 @@ def question_3_4_5_6():
     X_train, X_test, y_train, y_test = train_test_split(X_train_counts, y, test_size=0.2,
                                                         random_state=None)
 
-    output = open("BBC/bbc-performance.txt", "w")
+    output = open("BBC/outputs/bbc-performance.txt", "w")
 
     train_classifier(X_train, y_train, X_test, y_test, output, target_name, "MultinomialNB default values, try 1", 1)
     train_classifier(X_train, y_train, X_test, y_test, output, target_name, "MultinomialNB default values, try 2", 1)

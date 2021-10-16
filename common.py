@@ -19,7 +19,7 @@ def plot_instances(pdf_name, names, values):
     for i, v in enumerate(values):
         plt.text(x_location[i] - 1, v + 2, str(v))
     plt.bar(names, values)
-    fig.savefig("drugs/outputs/" + pdf_name, dpi=fig.dpi)
+    fig.savefig(pdf_name, dpi=fig.dpi)
 
 
 def clear_prediction_results():
