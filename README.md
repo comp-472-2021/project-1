@@ -1,5 +1,7 @@
 # Project 1
 
+github link : https://github.com/comp-472-2021/project-1
+
 ## Run Text and Drugs Classification
 
     run -> main.py
